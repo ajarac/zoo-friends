@@ -31,19 +31,19 @@ class AnimalController(
     }
 
     @PostMapping("/chicken")
-    fun createAnimal(@RequestBody chickenDTO: ChickenDTO): Chicken {
+    fun createChicken(@RequestBody chickenDTO: ChickenDTO): Chicken {
         val animal: Chicken = ChickenDTO.toEntity(chickenDTO)
         return saveAnimal<Chicken>(animal)
     }
 
     @PostMapping("/dog")
-    fun createAnimal(@RequestBody dog: DogDTO): Dog {
+    fun createDog(@RequestBody dog: DogDTO): Dog {
         val animal: Dog = DogDTO.toEntity(dog)
         return saveAnimal<Dog>(animal)
     }
 
     @PostMapping("/parrot")
-    fun createAnimal(@RequestBody parrot: ParrotDTO): Parrot {
+    fun createParrot(@RequestBody parrot: ParrotDTO): Parrot {
         val animal: Parrot = ParrotDTO.toEntity(parrot)
         return saveAnimal<Parrot>(animal)
     }
